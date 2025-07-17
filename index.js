@@ -11,13 +11,13 @@ wss.on("connection", (ws) => {
   let counter = 1;
 
   const interval = setInterval(() => {
-    const message = `Response from V2 (${counter})`;
+    const message = `Response from V1 (${counter})`;
     ws.send(message);
     console.log(`Sent: ${message}`);
     counter++;
   }, 5000); // 30 seconds
 
-  const message = `Response from V2 (${counter})`;
+  const message = `Response from V1 (${counter})`;
   ws.send(message);
 
   ws.on("close", () => {
